@@ -1,0 +1,425 @@
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flayer img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/*header*/
+.navegador {
+  position: fixed;
+  top: 2em;
+  background-color: #2B3F61;
+  width: 100vw;
+  height: 4em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+}
+.navegador ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .navegador ul {
+    position: fixed;
+    top: 0;
+    left: -25em;
+    background-color: #2B3F61;
+    width: 30vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.6s ease;
+  }
+  .navegador ul:hover {
+    left: 0em;
+  }
+}
+.navegador a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 1.4em 1.5em;
+}
+.navegador a:hover {
+  background-color: #4671bc;
+  transition: all 0.5s ease;
+  border: solid #4671bc 1em;
+}
+@media (max-width: 1200px) {
+  .navegador a {
+    color: white;
+  }
+}
+.navegador h1 {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  position: absolute;
+  padding-right: 1em;
+}
+@media (max-width: 1200px) {
+  .navegador h1 {
+    padding-right: 0.5em;
+  }
+}
+.navegador .fa-bars {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .navegador .fa-bars {
+    font-size: 2em;
+    color: white;
+    margin: 1em 90%;
+    display: block;
+    width: 100%;
+  }
+  .navegador .fa-bars:hover + ul {
+    left: 0em;
+  }
+}
+
+/*main index*/
+.info {
+  height: 8em;
+  background-color: rgba(0, 0, 0, 0.945);
+  margin-top: -0.2em;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.new h2 {
+  height: 4em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: overline;
+  margin-top: 4em;
+}
+
+.product {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+}
+.product button {
+  height: 2.5em;
+  width: 7.5em;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+.product button:hover {
+  background-color: #4671bc;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  border: #4671bc solid 1em;
+}
+.product h5 {
+  display: flex;
+  justify-content: center;
+}
+.product p {
+  display: flex;
+  justify-content: center;
+}
+.product img {
+  width: 100%;
+  height: 25em;
+  object-fit: cover;
+  border: none;
+  margin-bottom: 1em;
+}
+
+.categoria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.categoria h2 {
+  height: 4em;
+  width: 100vw;
+  padding: 6em 0em 2em 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: overline;
+}
+
+.genero {
+  width: 20em;
+  padding: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genero:hover {
+  border: solid #4671bc 1em;
+  background-color: #4671bc;
+  transition: all 0.6s ease;
+  border-radius: 0.3em;
+}
+.genero img {
+  width: 100%;
+  height: 25em;
+  object-fit: cover;
+  border: none;
+}
+.genero h3 {
+  color: white;
+  text-shadow: black 1px 0px 1px;
+  font-size: 3.5em;
+  position: absolute;
+  z-index: 1;
+}
+
+/*main nosotros*/
+.institucion {
+  padding-top: 8em;
+  margin: 0em 4em;
+  display: flex;
+  flex-direction: column;
+}
+.institucion h4 {
+  padding-top: 2em;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  text-decoration: overline;
+}
+
+.nosotros h2,
+.nosotros p {
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.lista h3 {
+  padding: 2em 0em 0.5em 0em;
+  display: flex;
+  justify-content: center;
+}
+.lista ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*main contacto*/
+.preguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8em;
+  margin: 0em 2em;
+}
+.preguntas img {
+  width: 100vw;
+  object-fit: cover;
+}
+.preguntas h2 {
+  font-size: 2em;
+  text-decoration: overline;
+}
+.preguntas h3 {
+  padding: 1em 0em 0.5em 0em;
+}
+.preguntas ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.devoluciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4em;
+  margin: 0em 2em;
+}
+.devoluciones h2 {
+  font-size: 2em;
+  text-decoration: overline;
+}
+.devoluciones h3 {
+  padding: 1em 0em 0.5em 0em;
+}
+.devoluciones ol {
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario {
+  width: 75vw;
+  margin: 5em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid;
+  border-radius: 1em;
+  border-color: black;
+  border-width: 0.2em;
+  padding: 2em 0em;
+  background-color: #2B3F61;
+}
+@media (min-width: 768px) {
+  .formulario {
+    width: 32em;
+  }
+}
+.formulario h3 {
+  height: 2em;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+.formulario form input {
+  height: 2.5em;
+  width: 50vw;
+  margin: 0.5em 0em;
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .formulario form input {
+    width: 21em;
+  }
+}
+.formulario form button {
+  width: 6em;
+  height: 2em;
+  margin: 0.5em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+}
+.formulario form button:hover {
+  background-color: #4671bc;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: solid #4671bc 1em;
+}
+
+/*footer*/
+.footer {
+  background-color: rgba(0, 0, 0, 0.945);
+  height: 12em;
+  width: 100%;
+  color: white;
+  margin-top: 6em;
+  padding: 1em 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "ayuda     institucional socialmedia" "copyrigth copyrigth     copyrigth";
+}
+@media (max-width: 576px) {
+  .footer {
+    height: 100%;
+    margin-top: 6em;
+    padding: 1em 1em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "ayuda" "institucional" "socialmedia" "copyrigth";
+  }
+}
+
+.help,
+.help ul,
+.help a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  grid-area: ayuda;
+}
+
+.institucional,
+.institucional a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: white;
+  text-decoration: none;
+  grid-area: institucional;
+}
+@media (max-width: 576px) {
+  .institucional,
+  .institucional a {
+    padding-top: 1em;
+  }
+}
+
+.socialmedia,
+.socialmedia a,
+.socialmedia i {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  text-decoration: none;
+  margin: 0em 1em;
+  grid-area: socialmedia;
+  font-weight: bold;
+}
+.socialmedia:hover,
+.socialmedia a:hover,
+.socialmedia i:hover {
+  color: #4671bc;
+  transition: all 0.5s ease;
+}
+
+.copyrigth {
+  grid-area: copyrigth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
