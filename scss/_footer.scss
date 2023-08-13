@@ -24,41 +24,38 @@
     }
 
 }
-.help,
-.help ul,
-.help a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    list-style: none;
-    color: $color;
-    text-decoration: none;
+.help{
+    @include flex-column-center-gap;
     grid-area: ayuda;
 }
-.institucional,
-.institucional a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    color: $color;
-    text-decoration: none;
+.help ul{
+    @include flex-column-center-gap;
+    list-style: none;
+}
+.help a{
+    @include color-none;
+}
+.institucional{
+    @include flex-column-center-gap;
     grid-area: institucional;
     @media(max-width:576px){
         padding-top: 1em;
     }
 }
-.socialmedia,
-.socialmedia a,
-.socialmedia i{
+.institucional a{
+    @include color-none;
+}
+.socialmedia{
     padding-top: 1em;
     display: flex;
     justify-content: space-evenly;
-    color: $color;
-    text-decoration: none;
-    margin: 0em 1em;
     grid-area: socialmedia;
+}
+.socialmedia a{
+    @include color-none;
+}
+.fa-brands{
+    padding-top: 1em;
     font-weight: bold;
     &:hover{
         color: $bgc2;

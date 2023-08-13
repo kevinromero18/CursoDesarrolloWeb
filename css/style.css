@@ -375,51 +375,62 @@
   }
 }
 
-.help,
-.help ul,
-.help a {
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  grid-area: ayuda;
+}
+
+.help ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
   list-style: none;
-  color: white;
-  text-decoration: none;
-  grid-area: ayuda;
 }
 
-.institucional,
-.institucional a {
+.help a {
+  color: white;
+  text-decoration: none;
+}
+
+.institucional {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  color: white;
-  text-decoration: none;
   grid-area: institucional;
 }
 @media (max-width: 576px) {
-  .institucional,
-  .institucional a {
+  .institucional {
     padding-top: 1em;
   }
 }
 
-.socialmedia,
-.socialmedia a,
-.socialmedia i {
+.institucional a {
+  color: white;
+  text-decoration: none;
+}
+
+.socialmedia {
   padding-top: 1em;
   display: flex;
   justify-content: space-evenly;
+  grid-area: socialmedia;
+}
+
+.socialmedia a {
   color: white;
   text-decoration: none;
-  margin: 0em 1em;
-  grid-area: socialmedia;
+}
+
+.fa-brands {
+  padding-top: 1em;
   font-weight: bold;
 }
-.socialmedia:hover,
-.socialmedia a:hover,
-.socialmedia i:hover {
+.fa-brands:hover {
   color: #4671bc;
   transition: all 0.5s ease;
 }

@@ -1,0 +1,10 @@
+@mixin flex-column-center-gap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+@mixin color-none{
+    color: $color;
+    text-decoration: none;
+}
