@@ -1,30 +1,84 @@
-.flayer img{
+.titulo{
+    background: linear-gradient($bgc1, $bgc2);
     width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+    height: 12em;
+    font-size: 1em;
+    overflow: hidden;
+    @media(max-width:576px){
+        display: flex;
+        justify-content: start;
+        padding-left: 1.5em;
+        font-size: 0.9em;
+    }
+    h1{
+        color: $bgc1;
+        height: 7em;
+        line-height: 7em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        ul{
+            width: 2em;
+            font-size: 1em;
+            padding-left: 0.2em;
+            list-style: none;
+            margin: 0;
+            li{
+                color: $bgc1;
+                animation: cambiar 6s infinite;
+            }
+        }
+    }
+}
+@keyframes cambiar{
+    0%{
+        margin-top: 0;
+    }
+    20%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -3.5em;
+    }
+    50%{
+        margin-top: -3.5em;
+    }
+    85%{
+        margin-top: -3.5em;
+    }
+    95%{
+        margin-top: -3.5em;
+    }
+    100%{
+        margin-top: 0;
+    }
 }
 .info{
     height: 8em;
-    background-color: $bgc3;
+    background-color: $bgc1;
     margin-top: -0.2em;
+    position: relative;
     color: $color;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
 .new{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     h2{
+        font-size: 2em;
+        font-weight: 700;
         height: 4em;
         width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: overline;
-        margin-top: 4em;
+        margin-top: 2em;
     }
     .product{
         width: 20em;
@@ -32,7 +86,7 @@
         flex-direction: column;
         padding: 1em 1em;
         margin: 1em;
-        box-shadow: 0em 0.5em 0.7em rgba(0,0,0,0.5);
+        box-shadow: $bxsh;
         transition: 0.6s ease-in-out;
         &:hover{
             transform: translateY(1.3em);
@@ -48,7 +102,7 @@
             font-size: 1.1em;
             height: 2.5em;
             width: 9em;
-            background-color: $bgc3;
+            background-color: $bgc1;
             color: $color;
             border: none;
             border-radius: 0.2em;
@@ -63,6 +117,8 @@
                 cursor: pointer;
                 transition: all 0.6s ease;
                 border: $bgc4 solid 1em;
+                color: black;
+                font-weight: 700;
             }
         }
         h5{
@@ -112,8 +168,8 @@
             border: none;
         }
         h3{
-            color: white;
-            text-shadow: $bgc1 1px 0px 1px;
+            color: $bgc3;
+            text-shadow: $bxsh;
             font-size: 3em;
             font-weight: bolder;
             position: absolute;

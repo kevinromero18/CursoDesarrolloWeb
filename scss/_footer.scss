@@ -1,5 +1,5 @@
 .footer{
-    background-color: $bgc3;
+    background-color: $bgc1;
     height: 12em;
     width: 100%;
     color: $color;
@@ -58,7 +58,7 @@
     padding-top: 1em;
     font-weight: bold;
     &:hover{
-        color: $bgc2;
+        color: $bgc4;
         transition: all 0.5s ease;
     }
 }

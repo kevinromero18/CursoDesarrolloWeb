@@ -1,5 +1,5 @@
 .institucion{
-    padding-top: 8em;
+    padding-top: 2em;
     margin: 0em 4em;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@
 .nosotros p{
     padding-top: 1em;
     display: flex;
+    text-align: center;
     justify-content: center;
 }
 .lista{
@@ -24,8 +25,8 @@
         justify-content: center;
     }
     ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-column-center-gap;
+        text-align: center;
+        list-style: none;
     }
 }
