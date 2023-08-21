@@ -610,6 +610,9 @@ h4 {
   width: 100vw;
   object-fit: cover;
 }
+.preguntas h2 {
+  text-align: center;
+}
 .preguntas h3 {
   padding: 1em 0em 0.5em 0em;
 }
@@ -633,6 +636,9 @@ h4 {
   align-items: center;
   gap: 1em;
   margin: 0em 2em;
+}
+.devoluciones h2 {
+  text-align: center;
 }
 .devoluciones h3 {
   padding: 1em 0em 0.5em 0em;
