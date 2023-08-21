@@ -35,11 +35,8 @@
         position: relative;
         padding: 1.4em 1.5em;
         &:hover{
-            background-color: $bgc4;
-            transition: all 0.5s ease;
-            border: solid $bgc4 1em;
-            color: black;
-            font-weight: 700;
+            @include boton-hover($bgc4, pointer, all 0.6s ease, $bgc4 solid 1em, 700);
+            color: $color2;
         }
         @media(max-width:1200px){
             color: $color;

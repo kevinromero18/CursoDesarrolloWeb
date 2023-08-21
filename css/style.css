@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+.devoluciones h2, .preguntas h2, .nosotros h2, .container h2, .categoria h2, .new h2 {
+  font-size: 2em;
+  font-weight: 700;
+  height: 4em;
+  width: 100vw;
+  text-decoration: overline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
 .navegador {
   position: fixed;
   background-color: #191970;
@@ -47,10 +59,11 @@
 }
 .navegador a:hover {
   background-color: #FFDB58;
-  transition: all 0.5s ease;
-  border: solid #FFDB58 1em;
-  color: black;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  border: #FFDB58 solid 1em;
   font-weight: 700;
+  color: black;
 }
 @media (max-width: 1200px) {
   .navegador a {
@@ -149,17 +162,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-.new h2 {
-  font-size: 2em;
-  font-weight: 700;
-  height: 4em;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: overline;
-  margin-top: 2em;
-}
 .new .product {
   width: 20em;
   display: flex;
@@ -184,14 +186,13 @@
   height: 2.5em;
   width: 9em;
   background-color: #191970;
-  color: hsl(300, 20%, 96%);
-  border: none;
   border-radius: 0.2em;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  color: hsl(300, 20%, 96%);
   margin-top: 1em;
 }
 .new .product button:hover {
@@ -199,8 +200,8 @@
   cursor: pointer;
   transition: all 0.6s ease;
   border: #FFDB58 solid 1em;
-  color: black;
   font-weight: 700;
+  color: black;
 }
 .new .product h5 {
   display: flex;
@@ -216,15 +217,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-.categoria h2 {
-  height: 4em;
-  width: 100vw;
-  padding: 6em 0em 2em 0em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: overline;
 }
 .categoria .genero {
   width: 18em;
@@ -269,20 +261,12 @@
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  margin-bottom: 12em;
-  padding-top: 4em;
+  margin-bottom: 10em;
 }
 @media (max-width: 576px) {
   .container {
     margin: 0;
   }
-}
-.container h2 {
-  font-size: 2em;
-  font-weight: 700;
-  text-decoration: overline;
-  display: flex;
-  justify-content: center;
 }
 .container input {
   display: none;
@@ -292,7 +276,6 @@
   height: 31em;
   width: 20em;
   margin-top: 2em;
-  margin-bottom: 0.5em;
   perspective: 40em;
   transform-style: preserve-3d;
   border-radius: 1em;
@@ -372,12 +355,13 @@
   height: 2.5em;
   width: 9em;
   background-color: #191970;
-  color: hsl(300, 20%, 96%);
   border-radius: 0.2em;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  color: hsl(300, 20%, 96%);
 }
 @media (max-width: 576px) {
   .container .cards label .tarjeta .infos button {
@@ -392,8 +376,8 @@
   cursor: pointer;
   transition: all 0.6s ease;
   border: #FFDB58 solid 1em;
-  color: black;
   font-weight: 700;
+  color: black;
 }
 .container .cards label .tarjeta .infos h5 {
   display: flex;
@@ -583,23 +567,10 @@
   transform: translate3d(45%, 0, -8em);
 }
 
-.institucion {
-  padding-top: 2em;
-  margin: 0em 4em;
-  display: flex;
-  flex-direction: column;
+.nosotros h2 {
+  margin-top: 0;
 }
-.institucion h4 {
-  padding-top: 2em;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  text-decoration: overline;
-}
-
-.nosotros h2,
 .nosotros p {
-  padding-top: 1em;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -619,23 +590,25 @@
   list-style: none;
 }
 
+h4 {
+  margin-top: 2em;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  text-decoration: overline;
+}
+
 .preguntas {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  padding-top: 4em;
   margin: 0em 2em;
   gap: 0.5em;
 }
 .preguntas img {
   width: 100vw;
   object-fit: cover;
-}
-.preguntas h2 {
-  font-size: 2em;
-  text-decoration: overline;
-  text-align: center;
 }
 .preguntas h3 {
   padding: 1em 0em 0.5em 0em;
@@ -659,13 +632,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  padding-top: 4em;
   margin: 0em 2em;
-}
-.devoluciones h2 {
-  font-size: 2em;
-  text-decoration: overline;
-  text-align: center;
 }
 .devoluciones h3 {
   padding: 1em 0em 0.5em 0em;
@@ -743,8 +710,9 @@
 .formulario form button:hover {
   background-color: #FFDB58;
   cursor: pointer;
-  transition: all 0.5s ease;
-  border: solid #FFDB58 1em;
+  transition: all 0.6s ease;
+  border: #FFDB58 solid 1em;
+  font-weight: 700;
 }
 
 .footer {

@@ -1,22 +1,13 @@
-.institucion{
-    padding-top: 2em;
-    margin: 0em 4em;
-    display: flex;
-    flex-direction: column;
-    h4{
-        padding-top: 2em;
-        font-size: 1.5em;
-        display: flex;
-        justify-content: center;
-        text-decoration: overline;
+.nosotros{
+    h2{
+        @extend %h2;
+        margin-top: 0;
     }
-}
-.nosotros h2,
-.nosotros p{
-    padding-top: 1em;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    p{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
 }
 .lista{
     h3{
@@ -30,3 +21,11 @@
         list-style: none;
     }
 }
+h4{
+    margin-top: 2em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    text-decoration: overline;
+}
+

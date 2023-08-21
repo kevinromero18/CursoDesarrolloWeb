@@ -8,3 +8,22 @@
     color: $color;
     text-decoration: none;
 }
+@mixin boton($fz, $hg, $wd, $bg, $b-r, $br, $df, $j-c, $a-i, $mg){
+    font-size: $fz;
+    height: $hg;
+    width: $wd;
+    background-color: $bg;
+    border-radius: $b-r;
+    border: $br;
+    display: $df;
+    justify-content: $j-c;
+    align-items: $a-i;
+    margin: $mg;
+}
+@mixin boton-hover($bg, $cursor, $trs, $br, $fw){
+    background-color: $bg;
+    cursor: $cursor;
+    transition: $trs;
+    border: $br;
+    font-weight: $fw;
+}
