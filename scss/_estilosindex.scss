@@ -1,6 +1,6 @@
 .titulo{
     background: linear-gradient($bgc1, $bgc2);
-    width: 100vw;
+    width: 100%;
     height: 12em;
     font-size: 1em;
     overflow: hidden;
@@ -55,6 +55,7 @@
     }
 }
 .info{
+    width: 100%;
     height: 8em;
     background-color: $bgc1;
     margin-top: -0.2em;
