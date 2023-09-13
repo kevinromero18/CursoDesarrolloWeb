@@ -1,3 +1,4 @@
+alert("Recuerda abrir tu consola para realizar las operaciones!");
 let carrito = []; // Array para almacenar los productos
 let continuar = true;
 
