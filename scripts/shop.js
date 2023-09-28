@@ -1,4 +1,4 @@
-alert("Recuerda abrir tu consola para realizar las operaciones!");
+/*alert("Recuerda abrir tu consola para realizar las operaciones!");
 let carrito = []; // Array para almacenar los productos
 let continuar = true;
 
@@ -11,7 +11,7 @@ function mostrarCarrito() {
     console.log(producto.nombre + "  $" + producto.precio);
     total += producto.precio;
   }
-
+  
   console.log("Total: $" + total);
 }
 
@@ -28,4 +28,13 @@ while (continuar) {
   }
 }
 
-mostrarCarrito();
+mostrarCarrito();*/
+
+let swiper = new Swiper(".product", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

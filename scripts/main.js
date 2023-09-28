@@ -1,4 +1,4 @@
-let nombreUsuario = false;
+/*let nombreUsuario = false;
 let regex = /^[A-Za-z\s]+$/;
 
 function validarUsuario(){
@@ -15,7 +15,7 @@ function validarUsuario(){
     }  
 }
 
-validarUsuario();
+validarUsuario();*/
 
 
 

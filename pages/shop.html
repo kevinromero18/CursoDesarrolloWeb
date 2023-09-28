@@ -9,6 +9,7 @@
         <meta name="description" content="IMPORTADO SPORT, una empresa argentina referente en el mercado de calzados.">
         <!--linkeo de la hoja de estilos-->
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css">
         <!--Linkeo del favicon-->
         <link rel="shortcut icon" href="../multimedia/img/favicon.jpg" type="image/x-icon">
         <!--Linkeo de las fuentes-->
@@ -44,7 +45,7 @@
                     </ul>
                 </h1>
             </div>
-            <!--Productos principales-->
+            <!--Productos principales
             <section class="container">
                 <h2>UNISEX</h2>
                 <input type="radio" name="slider" id="s1" checked>
@@ -330,6 +331,30 @@
                     </label>
                 </div>
             </section>
+            -->
+            <section class="body">
+                <section class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img class="card-img" src="../multimedia/img/AIR-SUPREME.jpeg" alt="airsupreme">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Air Force React</h5>
+                                    <h5>$44.000</h5>
+                                    <p>6 cuotas sin INTERÉS $7.333</p>
+                                    <button class="button">COMPRAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </section>
+            </section>
         </main>
         <footer>
             <!--Footer-->
@@ -355,5 +380,6 @@
             </section>
         </footer>
         <script src="../scripts/shop.js"></script>
+        <script src="../scripts/swiper-bundle.min.js"></script>
     </body>
 </html>
