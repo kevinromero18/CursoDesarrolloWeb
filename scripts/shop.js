@@ -1,40 +1,78 @@
-/*alert("Recuerda abrir tu consola para realizar las operaciones!");
-let carrito = []; // Array para almacenar los productos
-let continuar = true;
-
-function mostrarCarrito() {
-  console.log("----- Carrito de Compras -----");
-  let total = 0;
-
-  for (let desde = 0; desde < carrito.length; desde++) {
-    let producto = carrito[desde];
-    console.log(producto.nombre + "  $" + producto.precio);
-    total += producto.precio;
-  }
-  
-  console.log("Total: $" + total);
+// Objeto constructor para los productos
+function Producto(nombre, precio) {
+  this.nombre = nombre;
+  this.precio = precio;
 }
 
-while (continuar) {
-  let nombreProducto = prompt("Ingresa el nombre del producto que desea comprar: Zapatilla / Gorra / Pantalon / Remera").toUpperCase();
-  let precioProducto = parseInt(prompt("Ingresa el precio del producto que deseas comprar: Z: $4000 / G: $1000 / P: $3000 / R: $2000"));
+// Definición de los productos y sus precios 
+const preciosProductos = {
+  Pantalon: 3000,
+  Remera: 2000,
+  Gorra: 1000,
+  Zapatilla: 5000,
+};
 
-  carrito.push({ nombre: nombreProducto, precio: precioProducto });
+// Instanciamiento de Producto para cada producto
+const pantalon = new Producto("Pantalón", preciosProductos.Pantalon);
+const remera = new Producto("Remera", preciosProductos.Remera);
+const gorra = new Producto("Gorra", preciosProductos.Gorra);
+const zapatilla = new Producto("Zapatilla", preciosProductos.Zapatilla);
 
-  let respuesta = prompt("¿Quieres agregar otro producto al carrito? (Sí/No)").toLowerCase();
+// Objeto contenedor de productos
+const productos = {
+  Pantalon: pantalon,
+  Remera: remera,
+  Gorra: gorra,
+  Zapatilla: zapatilla,
+};
 
-  if (respuesta === "no") {
-    continuar = false;
+// Función para mostrar el menú de productos y obtener la selección del usuario
+function mostrarMenuProductos() {
+  let opciones = "Productos disponibles:\n";
+  for (const producto in productos) {
+    opciones += `${producto}: $${productos[producto].precio}\n`;
+  }
+
+  const seleccion = prompt(opciones + "\nIngrese el nombre del producto que desea comprar:");
+
+  if (seleccion && seleccion in productos) {
+    return seleccion;
+  } else {
+    alert("Producto no válido. Por favor, seleccione un producto válido.");
+    return mostrarMenuProductos();
   }
 }
 
-mostrarCarrito();*/
+// Función principal
+function main() {
+  let totalPagar = 0;
 
-let swiper = new Swiper(".product", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+  do {
+    const productoSeleccionado = mostrarMenuProductos();
+    const cantidad = parseInt(prompt(`Ingrese la cantidad de ${productoSeleccionado} que desea comprar:`));
+
+    if (isNaN(cantidad) || cantidad <= 0) {
+      alert("Cantidad no válida. Por favor, ingrese una cantidad válida.");
+      continue; // Vuelve al inicio del bucle si la cantidad no es válida
+    }
+
+    totalPagar += productos[productoSeleccionado].precio * cantidad;
+
+    const agregarOtro = prompt("¿Deseas agregar otro producto a tu compra? (si/no)").toLowerCase();
+    if (agregarOtro !== "si") {
+      break; // Sale del bucle si la respuesta no es 'si'
+    }
+
+  } while (true); // Bucle infinito, se rompe con el "break" cuando el usuario no desea agregar más productos
+
+  alert(`El total a pagar por tu compra es: $${totalPagar}`);
+}
+
+// Llamado de la función principal
+main();
+
+
+
+
+
+
