@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <!--Meta para que reconzca el ancho de la ventana en cualquier dispositivo-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Breve descripcion del sitio para el posicionamiento y el seo-->
+        <!--Breve descripcion del sitio para el posicionamiento y el SEO-->
         <meta name="description" content="IMPORTADO SPORT, una empresa argentina referente en el mercado de calzados.">
         <!--linkeo de la hoja de estilos-->
         <link rel="stylesheet" href="./css/style.css">
@@ -31,6 +31,10 @@
                     <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
                     <li><a href="./pages/contacto.html">CONTACTO</a></li>
                 </ul>
+                <div class="carrito">
+                    <a href="./pages/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <span id="contador">0</span>
+                </div>
             </nav>
         </header>
         <main>
@@ -61,25 +65,34 @@
             <section class="new">
                 <h2>LO NUEVO</h2>
                 <div class="product">
-                    <img src="./multimedia/img/AIR-FORCE-REACT.jpeg" alt="airforcereact">
-                    <h5>Air Force React</h5>
-                    <h5>$44.000</h5>
-                    <p>6 cuotas sin INTERÉS $7.333</p>
-                    <button>COMPRAR</button>
+                    <img class="imagen" src="./multimedia/img/AIR-FORCE-REACT.jpeg" alt="airforcereact">
+                    <h5 class="nombre">Air Force React</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="./multimedia/img/JORDAN-RETRO.jpeg" alt="">
-                    <h5>Jordan Retro 4 OFF White</h5>
-                    <h5>$44.000</h5>
-                    <p>6 cuotas sin INTERÉS $7.333</p>
-                    <button>COMPRAR</button>
+                    <img class="imagen" src="./multimedia/img/JORDAN-RETRO.jpeg" alt="">
+                    <h5 class="nombre">Jordan Retro 4 OFF White</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <img src="./multimedia/img/AIR-FORCE-PAISLEY.jpeg" alt="">
-                    <h5>Air Force 1 Paisley</h5>
-                    <h5>$44.000</h5>
-                    <p>6 cuotas sin INTERÉS $7.333</p>
-                    <button>COMPRAR</button>
+                    <img class="imagen" src="./multimedia/img/AIR-FORCE-PAISLEY.jpeg" alt="">
+                    <h5 class="nombre">Air Force 1 Paisley</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
                 </div>
             </section>
             <!--Categorias de los productos-->
@@ -126,6 +139,7 @@
                 </div>
             </section>
         </footer>
-        <script src="./scripts/main.js"></script>
+        <script src="./scripts/shop.js"></script>
+        <script src="./scripts/carrito.js"></script>
     </body>
 </html>

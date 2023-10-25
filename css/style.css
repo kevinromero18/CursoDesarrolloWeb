@@ -51,13 +51,13 @@
     left: 0em;
   }
 }
-.navegador a {
+.navegador ul a {
   color: hsl(300, 20%, 96%);
   text-decoration: none;
   position: relative;
   padding: 1.4em 1.5em;
 }
-.navegador a:hover {
+.navegador ul a:hover {
   background-color: #FFDB58;
   cursor: pointer;
   transition: all 0.6s ease;
@@ -66,9 +66,37 @@
   color: black;
 }
 @media (max-width: 1200px) {
-  .navegador a {
+  .navegador ul a {
     color: hsl(300, 20%, 96%);
   }
+}
+.navegador .carrito {
+  background-color: #191970;
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  margin: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3em 3em;
+}
+.navegador .carrito:hover {
+  background-color: #424299;
+  transition: 1s ease;
+  cursor: pointer;
+}
+.navegador .carrito .fa-cart-shopping {
+  color: hsl(300, 20%, 96%);
+  font-size: 1.5em;
+}
+.navegador .carrito #contador {
+  position: relative;
+  bottom: 0;
+  top: 0.5em;
+  color: #FFDB58;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 .navegador .fa-bars {
   display: none;
@@ -77,7 +105,7 @@
   .navegador .fa-bars {
     font-size: 2em;
     color: hsl(300, 20%, 96%);
-    margin: 1em 90%;
+    margin: 80%;
     display: block;
     width: 100%;
   }
@@ -273,10 +301,13 @@
   border: none;
   margin-bottom: 1em;
 }
-.new .product button {
-  font-size: 1.1em;
+.new .product .btn {
+  display: flex;
+}
+.new .product .btn button {
+  font-size: 1.2em;
   height: 2.5em;
-  width: 9em;
+  width: 6.5em;
   background-color: #191970;
   border-radius: 0.2em;
   border: none;
@@ -287,7 +318,7 @@
   color: hsl(300, 20%, 96%);
   margin-top: 1em;
 }
-.new .product button:hover {
+.new .product .btn button:hover {
   background-color: #FFDB58;
   cursor: pointer;
   transition: all 0.6s ease;
@@ -345,7 +376,7 @@
   transition: all 0.6s;
 }
 
-/*.container{
+/* .container{
     width: 100%;
     height: 100%;
     display: flex;
@@ -613,106 +644,80 @@
 #s19:checked~.cards #slide16{
     box-shadow: 0em 0.5em 0.7em rgba(0,0,0,0.5);
     transform: translate3d(45%, 0, -8em);
-}*/
-.body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #efefef;
+} */
+/* .body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
 }
-
-.slide-container {
-  max-width: 70em;
-  width: 100%;
-  background-color: #FFF;
-  padding: 2.5em 0;
+.slide-container{
+    max-width: 70em;
+    width: 100%;
+    background-color: #FFF;
+    padding: 2.5em 0;
 }
-
-.slide-content {
-  margin: 0 2.5em;
+.slide-content{
+    margin: 0 2.5em;
 }
-
-.card {
-  background-color: #fff;
+.card{
+    background-color: #fff;
 }
-
 .overlay::before,
-.overlay::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -2.5em;
-  height: 2.5em;
-  width: 2.5em;
-  background-color: #FFF;
+.overlay::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2.5em;
+    height: 2.5em;
+    width: 2.5em;
+    background-color: #FFF;
 }
-
-.overlay::after {
-  border-radius: 0 1.5em 0 0;
-  background-color: #FFF;
+.overlay::after{
+    border-radius: 0 1.5em 0 0;
+    background-color: #FFF;
 }
-
-.image-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 0.3em;
-  position: relative;
+.image-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    row-gap: 0.3em;
+    position: relative;
 }
-
-.card-content {
-  padding: 0.6em 0.9em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-content{
+    padding: 0.6em 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.card-image {
-  padding: 0.6em 0;
-  position: relative;
-  height: 23em;
-  width: 18.5em;
-  background: #FFF;
+.card-image{
+    padding: 0.6em 0;
+    position: relative;
+    height: 23em;
+    width: 18.5em;
+    background: #FFF;
+}.card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-
-.card-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.button{
+    @include boton(1.1em, 2.5em, 9em, $bgc1, 0.2em, none, flex, center, center, auto);
+    color: $color;
+    margin-top: 1em;
+    &:hover{
+        @include boton-hover($bgc4, pointer, all 0.6s ease, $bgc4 solid 1em, 700);
+        color: $color2;
+    }
 }
-
-.button {
-  font-size: 1.1em;
-  height: 2.5em;
-  width: 9em;
-  background-color: #191970;
-  border-radius: 0.2em;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  color: hsl(300, 20%, 96%);
-  margin-top: 1em;
-}
-.button:hover {
-  background-color: #FFDB58;
-  cursor: pointer;
-  transition: all 0.6s ease;
-  border: #FFDB58 solid 1em;
-  font-weight: 700;
-  color: black;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+} */
 .nosotros h2 {
   margin-top: 0;
 }
@@ -865,6 +870,77 @@ h4 {
   transition: all 0.6s ease;
   border: #FFDB58 solid 1em;
   font-weight: 700;
+}
+
+.product-carrito {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+.product-carrito .tarjeta-carrito {
+  width: 10em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em;
+  margin: 1em 0.5em;
+  box-shadow: 0em 0.5em 0.7em rgba(10, 10, 10, 0.907);
+  border-radius: 0.2em;
+}
+.product-carrito .tarjeta-carrito .imagen-carrito {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+.product-carrito .tarjeta-carrito .nombre-carrito {
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-carrito .tarjeta-carrito .precio-carrito {
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-carrito .tarjeta-carrito .cuota-carrito {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-carrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.btn-carrito button {
+  font-size: 1.2em;
+  height: 2.5em;
+  width: 9em;
+  background-color: #191970;
+  border-radius: 0.2em;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  color: hsl(300, 20%, 96%);
+  margin-top: 1em;
+}
+.btn-carrito button:hover {
+  background-color: #FFDB58;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  border: #FFDB58 solid 1em;
+  font-weight: 700;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

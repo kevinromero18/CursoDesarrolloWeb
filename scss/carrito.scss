@@ -1,0 +1,56 @@
+.product-carrito{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    .tarjeta-carrito{
+        width: 10em;
+        display: flex;
+        flex-direction: column;
+        padding: 1em 1em;
+        margin: 1em 0.5em;
+        box-shadow: $bxsh;
+        border-radius: 0.2em;
+        .imagen-carrito{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: 0.5em;
+        }
+        .nombre-carrito{
+            font-size: 0.7em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .precio-carrito{
+            font-size: 0.7em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cuota-carrito{
+            font-size: 0.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+.btn-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    button{
+        @include boton(1.2em, 2.5em, 9em, $bgc1, 0.2em, none, flex, center, center, 1em);
+        color: $color;
+        margin-top: 1em;
+        &:hover{
+            @include boton-hover($bgc4, pointer, all 0.6s ease, $bgc4 solid 1em, 700);
+            color: $color2;
+        }
+    }
+}

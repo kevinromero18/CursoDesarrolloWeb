@@ -9,7 +9,6 @@
         <meta name="description" content="IMPORTADO SPORT, una empresa argentina referente en el mercado de calzados.">
         <!--linkeo de la hoja de estilos-->
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/swiper-bundle.min.css">
         <!--Linkeo del favicon-->
         <link rel="shortcut icon" href="../multimedia/img/favicon.jpg" type="image/x-icon">
         <!--Linkeo de las fuentes-->
@@ -32,6 +31,10 @@
                     <li><a href="./nosotros.html">NOSOTROS</a></li>
                     <li><a href="./contacto.html">CONTACTO</a></li>
                 </ul>
+                <div class="carrito">
+                    <a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <span id="contador">0</span>
+                </div>
             </nav>
         </header>
         <main>
@@ -45,7 +48,203 @@
                     </ul>
                 </h1>
             </div>
-            <!--Productos principales
+            <section class="new">
+                <h2>UNISEX</h2>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-SUPREME.jpeg" alt="airsupreme">
+                    <h5 class="nombre">Air Force Supreme</h5>
+                    <h5 class="precio">$45.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.500</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1.jpeg" alt="airforce1">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.133</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-HIGH.jpeg" alt="airforce1high">
+                    <h5 class="nombre">Air Force 1 High</h5>
+                    <h5 class="precio">$49.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $8.166</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-3.jpeg" alt="airforce1">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.133</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-CARTOON.jpeg" alt="airforcecartoon">
+                    <h5 class="nombre">Air Force 1 Cartoon</h5>
+                    <h5 class="precio">$45.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.500</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <h2>HOMBRE</h2>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-COLIN.jpeg" alt="airforcecolin">
+                    <h5 class="nombre">Air Force Colin</h5>
+                    <h5 class="precio">$45.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.500</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-ESSENTIAL.jpeg" alt="airforceessential">
+                    <h5 class="nombre">Air Force Essential</h5>
+                    <h5 class="precio">$45.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.500</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-NEGRA.jpeg" alt="airforce1">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-MAX-97.jpeg" alt="airmax97">
+                    <h5 class="nombre">Air Max 97</h5>
+                    <h5 class="precio">$49.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $8.166</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-MAX-97-2.jpeg" alt="airmax97">
+                    <h5 class="nombre">Air Max 97</h5>
+                    <h5 class="precio">$49.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $8.166</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <h2>MUJER</h2>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-PAISLEY.jpeg" alt="airforcepaisley">
+                    <h5 class="nombre">Air Force 1 Paisley</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-MATTE.jpeg" alt="airforcematte">
+                    <h5 class="nombre">Air Force 1 Matte</h5>
+                    <h5 class="precio">$49.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $8.166</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-SHADOW-1.jpeg" alt="airforceshadow">
+                    <h5 class="nombre">Air Force 1 Shadow</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-SHADOW-2.jpeg" alt="airforceshadow">
+                    <h5 class="nombre">Air Force 1 Matte</h5>
+                    <h5 class="precio">$49.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $8.166</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-SHADOW-3.jpeg" alt="airforceshadow">
+                    <h5 class="nombre">Air Force 1 Shadow</h5>
+                    <h5 class="precio">$44.000</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $7.333</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <h2>NIÑO</h2>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/SB-DUNK.jpeg" alt="nikedunk">
+                    <h5 class="nombre">Nike SB Dunk</h5>
+                    <h5 class="precio">$24.900</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $4.150</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-KID.jpeg" alt="airforce1">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$24.900</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $4.150</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-KID-3.jpeg" alt="airforce1high">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$24.900</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $4.150</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="imagen" src="../multimedia/img/AIR-FORCE-1-KID-2.jpeg" alt="airforce1">
+                    <h5 class="nombre">Air Force 1</h5>
+                    <h5 class="precio">$24.900</h5>
+                    <p class="cuota">6 cuotas sin INTERÉS $4.150</p>
+                    <div class="btn">
+                        <button class="btn-agregar">Agregar al Carrito</button>
+                        <button class="btn-quitar">Quitar del Carrito</button>
+                    </div>
+                </div>
+            </section>
+        <!--Productos principales
             <section class="container">
                 <h2>UNISEX</h2>
                 <input type="radio" name="slider" id="s1" checked>
@@ -330,9 +529,9 @@
                         </div>
                     </label>
                 </div>
-            </section>
-            -->
-            <section class="body">
+            </section> -->
+           
+        <!-- <section class="body">
                 <section class="slide-container swiper">
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
@@ -354,7 +553,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </section>
-            </section>
+            </section> -->
         </main>
         <footer>
             <!--Footer-->
@@ -380,6 +579,6 @@
             </section>
         </footer>
         <script src="../scripts/shop.js"></script>
-        <script src="../scripts/swiper-bundle.min.js"></script>
+        <script src="../scripts/carrito.js"></script>
     </body>
 </html>

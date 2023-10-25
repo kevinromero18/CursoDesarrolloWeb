@@ -1,4 +1,4 @@
-
+/* 
 const obtenerFechaNacimiento = () => prompt("Ingrese su fecha de nacimiento (YYYY-MM-DD):");
 
 const mostrarMensaje = (mensaje) => alert(mensaje);
@@ -54,8 +54,6 @@ function validarUsuario(){
     }  
 }
 
-validarUsuario();
-
-
+validarUsuario(); */
 
  
