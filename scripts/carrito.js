@@ -27,7 +27,6 @@ function pintarElementosDeCarrito() {
 document.addEventListener("DOMContentLoaded", () => {
     // Obtener el botón "Finalizar Compra" después de que la página se haya cargado completamente
     let btnFinalizar = clase("boton-finalizar")[0];
-    console.log(btnFinalizar);
     // Verificar si el botón existe antes de agregar el evento click
     if (btnFinalizar) {
         btnFinalizar.addEventListener("click", finalizarCompra);
