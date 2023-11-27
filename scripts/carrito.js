@@ -36,27 +36,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function finalizarCompra() {
     let carritoLocalStorage = JSON.parse(localStorage.getItem("Carrito") || []);
-    try{
+    try {
         if (carritoLocalStorage.length > 0) {
-            await Swal.fire({
-                title: "Compra Exitosa!",
-                text: "Su compra finalizó exitosamente, Gracias por elegirnos!",
-                icon: "success"
-            }).then(() => {
-                // Lógica para limpiar el carrito después de mostrar el SweetAlert
-                carrito = [];
-                localStorage.setItem("Carrito", JSON.stringify(carrito));
-                actualizarContador();
-                pintarElementosDeCarrito()
-              });
+            // Simulacion de URL
+            const url = 'https://ejemplo.com/api/procesar-compra';
+
+            // Utilizamos la funcion fetch 
+            const response = await fetch(carritoLocalStorage);
+
+            if (response.ok) {
+                await Swal.fire({
+                    title: "Compra Exitosa!",
+                    text: "Su compra finalizó exitosamente. ¡Gracias por elegirnos!",
+                    icon: "success"
+                }).then(() => {
+                    // Lógica para limpiar el carrito después de mostrar el SweetAlert
+                    carritoLocalStorage = [];
+                    localStorage.setItem("Carrito", JSON.stringify(carritoLocalStorage));
+                    actualizarContador();
+                    pintarElementosDeCarrito();
+                });
+            } else {
+                throw new Error('Error en la solicitud HTTP');
+            }
         } else {
             await Swal.fire({
                 title: "Algo salió mal!",
                 text: "Error en la compra! Verifica que tengas productos seleccionados!",
                 icon: "error"
             });
-        };
+        }
     } catch (error) {
-          console.error('Error al finalizar la compra:', error);
-    };
-};
+        console.error('Error al finalizar la compra:', error);
+    }
+}
+
+// Función para simular el uso de fetch con datos locales
+async function fetch(data) {
+    return new Promise((resolve, reject) => {
+        // Simulamos una demora de 2 segundos
+        setTimeout(() => {
+            // Devolvemos una respuesta exitosa
+            resolve({
+                ok: true,
+                json: async () => data,
+            });
+        }, 2000);
+    });
+}
